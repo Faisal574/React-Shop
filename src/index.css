@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  *{
+    --primary-color:#bfac5a;
+  }
+  svg{
+    vertical-align: middle;
+  }
+  .container-app {
+    max-width: 1280px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .hero_bg {
+    background-color: #e8d78d !important;
+    height: auto;
+    width: 100%;
+    z-index: 1000;
+  }
+  .hero_bg_page {
+    background-image: url("./assets//images/bg_6.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    z-index: 1000;
+    position: relative;
+  }
+  .hero-slide {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+    margin-top: 70px;
+    background-clip: content-box;
+    background-origin: content-box;
+    padding-bottom: 120px;
+  }
+  .product-image {
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    position: relative;
+  }
+
+  .product-image img {
+    width: 280px;
+    height: 280px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 999;
+  }
+
+  .product-image:hover img {
+    transform: scale(1.2);
+  }
+
+  .product-image > div {
+    position: absolute;
+    z-index: 999;
+  }
+
+  .product-image:hover button,
+  .product-image:hover > div {
+    transition: all 0.5s ease;
+    opacity: 1;
+  }
+  .gallery {
+    position: relative;
+  }
+  .gallery-img {
+    position: relative;
+    z-index: 999;
+  }
+  .view-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+  }
+  .gallery:hover div {
+    transition: all 0.5s ease;
+    opacity: 1;
+  }
+  #menu a.active {
+    color: #bfac5a;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .range {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+  }
+  #range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  #range::-webkit-slider-runnable-track {
+    height: 20px;
+    background: #beb04f;
+    border-radius: 10px;
+  }
+
+  #range::-moz-range-track {
+    height: 20px;
+    background: #e8d78d;
+    border-radius: 10px;
+  }
+
+ #range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: #e6cf6c;
+    border-radius: 50%;
+    border: 2px solid #baa23b;
+    box-shadow: -1480px 0 0 1480px #6e6419;
+  }
+  button:disabled{
+    background-color: #e8d78d;
+    cursor: not-allowed;
+  }
+}
